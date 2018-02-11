@@ -808,6 +808,10 @@ input[type="button"] {
     100% { background-image: url('../img/logo_40.png'); }
 }
 
+#header .logo :not(.logo-icon) {
+  min-height: 250px;
+  max-height: 500px;
+}
 #header .logo, #header .logo-icon {
   animation: logo-anim 4s steps(41) infinite alternate; }
 #header .menu {
