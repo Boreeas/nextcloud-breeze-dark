@@ -5,8 +5,8 @@
 * Check it out at https://github.com/mwalbeck/nextcloud-breeze-dark
 =============================================================================
 */
-/* 
- * 
+/*
+ *
  * All the colours for the Nextcloud Breeze Dark Theme.
  *
 */
@@ -764,8 +764,52 @@ input[type="button"] {
     color: #bdc3c7; }
 
 /* Header ------------------------------------------------------------------- */
+@keyframes logo-anim {
+    0% { background-image: url('../img/logo_0.png'); }
+    2% { background-image: url('../img/logo_1.png'); }
+    5% { background-image: url('../img/logo_2.png'); }
+    7% { background-image: url('../img/logo_3.png'); }
+    10% { background-image: url('../img/logo_4.png'); }
+    12% { background-image: url('../img/logo_5.png'); }
+    15% { background-image: url('../img/logo_6.png'); }
+    17% { background-image: url('../img/logo_7.png'); }
+    20% { background-image: url('../img/logo_8.png'); }
+    22% { background-image: url('../img/logo_9.png'); }
+    25% { background-image: url('../img/logo_10.png'); }
+    27% { background-image: url('../img/logo_11.png'); }
+    30% { background-image: url('../img/logo_12.png'); }
+    32% { background-image: url('../img/logo_13.png'); }
+    35% { background-image: url('../img/logo_14.png'); }
+    37% { background-image: url('../img/logo_15.png'); }
+    40% { background-image: url('../img/logo_16.png'); }
+    42% { background-image: url('../img/logo_17.png'); }
+    45% { background-image: url('../img/logo_18.png'); }
+    47% { background-image: url('../img/logo_19.png'); }
+    50% { background-image: url('../img/logo_20.png'); }
+    52% { background-image: url('../img/logo_21.png'); }
+    55% { background-image: url('../img/logo_22.png'); }
+    57% { background-image: url('../img/logo_23.png'); }
+    60% { background-image: url('../img/logo_24.png'); }
+    62% { background-image: url('../img/logo_25.png'); }
+    65% { background-image: url('../img/logo_26.png'); }
+    67% { background-image: url('../img/logo_27.png'); }
+    70% { background-image: url('../img/logo_28.png'); }
+    72% { background-image: url('../img/logo_29.png'); }
+    75% { background-image: url('../img/logo_30.png'); }
+    77% { background-image: url('../img/logo_31.png'); }
+    80% { background-image: url('../img/logo_32.png'); }
+    82% { background-image: url('../img/logo_33.png'); }
+    85% { background-image: url('../img/logo_34.png'); }
+    87% { background-image: url('../img/logo_35.png'); }
+    90% { background-image: url('../img/logo_36.png'); }
+    92% { background-image: url('../img/logo_37.png'); }
+    95% { background-image: url('../img/logo_38.png'); }
+    97% { background-image: url('../img/logo_39.png'); }
+    100% { background-image: url('../img/logo_40.png'); }
+}
+
 #header .logo, #header .logo-icon {
-  background-image: url("../img/logo.svg"); }
+  animation: logo-anim 4s steps(41) infinite alternate; }
 #header .menu {
   background-color: #31363b;
   filter: unset; }
