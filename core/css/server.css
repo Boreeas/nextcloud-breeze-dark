@@ -809,8 +809,6 @@ input[type="button"] {
 }
 
 #header .logo :not(.logo-icon) {
-  min-height: 250px;
-  max-height: 500px;
 }
 #header .logo, #header .logo-icon {
   animation: logo-anim 4s steps(41) infinite alternate; }
