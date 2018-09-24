@@ -1,7 +1,7 @@
 /*
 =============================================================================
 * Nextcloud breeze dark theme
-* Version: 13.0.0
+* Version: 13.0.5
 * Check it out at https://github.com/mwalbeck/nextcloud-breeze-dark
 =============================================================================
 */
@@ -45,3 +45,8 @@
 @import 'apps/user-account-deletion';
 @import 'apps/flow-upload';
 @import 'apps/deck';
+@import 'apps/fulltextsearch';
+@import 'apps/weather';
+@import 'apps/quicknotes';
+@import 'apps/passwords';
+@import 'apps/files-rightclick';
