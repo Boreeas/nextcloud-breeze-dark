@@ -33,10 +33,10 @@
 
 /* Starred ------------------------------------------------------------------ */
 
-.starred,
 .icon-starred,
 .icon-star:hover,
-.icon-star:focus {
+.icon-star:focus,
+.app-news #app-navigation .icon-starred {
 	background-image: url('../img/actions/starred.svg?v=1');
 	opacity: 1;
 }
@@ -74,7 +74,8 @@
 
 .icon-checkmark,
 .icon-sent,
-.icon-category-enabled {
+.icon-category-enabled,
+.multiselect.multiselect-vue .multiselect__content-wrapper li > span::before {
 	background-image: url('../img/actions/checkmark.svg?v=1');
 }
 
@@ -111,8 +112,33 @@
 .icon-shared,
 .nav-icon-federated-cloud,
 .nav-icon-sharingin,
-.nav-icon-sharingout {
+.nav-icon-sharingout,
+.nav-icon-shareoverview {
 	background-image: url('../img/actions/share.svg?v=1');
+}
+
+/* Unshare ------------------------------------------------------------------ */
+
+.nav-icon-deletedshares {
+	background-image: url('../img/actions/unshare.svg?v=1');
+}
+
+/* Phone -------------------------------------------------------------------- */
+
+.icon-phone {
+	background-image: url('../img/clients/phone.svg')
+}
+
+/* Tablet ------------------------------------------------------------------- */
+
+.icon-tablet {
+	background-image: url('../img/clients/tablet.svg')
+}
+
+/* Desktop ------------------------------------------------------------------ */
+
+.icon-desktop {
+	background-image: url('../img/clients/desktop.svg')
 }
 
 /* Tag ---------------------------------------------------------------------- */
@@ -122,9 +148,10 @@
 	background-image: url('../img/actions/tag.svg?v=1');
 }
 
-/* Link --------------------------------------------------------------------- */
+/* Link/World --------------------------------------------------------------------- */
 
-.icon-link {
+.icon-link,
+.icon-world {
 	background-image: url('../img/places/link.svg?v=1');
 }
 
@@ -139,8 +166,7 @@
 
 /* Toggle Filelist ---------------------------------------------------------- */
 
-.nav-icon-sessions,
-.nav-icon-security {
+.nav-icon-sessions {
 	background-image: url('../img/actions/toggle-filelist.svg?v=1');
 }
 
@@ -176,6 +202,8 @@
 /* More --------------------------------------------------------------------- */
 
 .icon-more,
+.icon-more-white,
+.icon-more.icon-white,
 #app-navigation .app-navigation-entry-utils 
 .app-navigation-entry-utils-menu-button 
 button:not([class^="icon-"]):not([class*=" icon-"]) {
@@ -184,6 +212,8 @@ button:not([class^="icon-"]):not([class*=" icon-"]) {
 
 /* Files -------------------------------------------------------------------- */
 
+.icon-category-files,
+.icon-files-dark,
 .nav-icon-files {
 	background-image: url('../img/places/files.svg?v=1');
 }
@@ -256,7 +286,10 @@ select {
 
 /* Confirm ------------------------------------------------------------------ */
 
-.icon-confirm {
+.icon-confirm,
+input[type="text"] + .icon-confirm:disabled, 
+input[type="password"] + .icon-confirm:disabled, 
+input[type="email"] + .icon-confirm:disabled {
 	background-image: url('../img/actions/confirm.svg?v=2');
 }
 
@@ -308,6 +341,12 @@ select {
 	background-image: url('../img/actions/close-ns.svg')
 }
 
+/* View Close --------------------------------------------------------------- */
+
+.icon-view-close {
+	background-image: url('../img/actions/view-close.svg');
+}
+
 /* Menu --------------------------------------------------------------------- */
 
 .icon-menu {
@@ -316,9 +355,16 @@ select {
 
 /* User --------------------------------------------------------------------- */
 
+.icon-user,
 .nav-icon-personal-settings,
 .icon-category-installed {
 	background-image: url('../img/actions/user.svg?v=1');
+}
+
+/* User admin --------------------------------------------------------------- */
+
+.icon-user-admin {
+	background-image: url('../img/actions/user-admin.svg?v=1');
 }
 
 /* Right Arrow -------------------------------------------------------------- */
@@ -361,7 +407,7 @@ select {
 
 /* Quota -------------------------------------------------------------------- */
 
-.nav-icon-quota {
+.icon-quota {
 	background-image: url('../img/actions/quota.svg?v=1');
 }
 
@@ -374,7 +420,8 @@ select {
 
 /* Calendar ----------------------------------------------------------------- */
 
-.icon-badge {
+.icon-badge,
+.icon-calendar-dark {
 	background-image: url('../img/places/calendar.svg');
 }
 
@@ -466,6 +513,12 @@ select {
 	background-image: url('../img/actions/screen-off.svg');
 }
 
+/* Address ------------------------------------------------------------------ */
+
+.icon-address {
+	background-image: url('../img/actions/address.svg');
+}
+
 /* App Categories ----------------------------------------------------------- */
 
 // App Bundles
@@ -476,12 +529,6 @@ select {
 // Customization
 .icon-category-customization {
 	background-image: url('../img/categories/customization.svg?v=1');
-}
-
-// Files
-.icon-category-files,
-.icon-files-dark {
-	background-image: url('../img/categories/files.svg?v=1');
 }
 
 // Games
@@ -747,12 +794,14 @@ a.impersonate img.svg {
 
 	// In admin settings
 	#app-navigation img[src$="/settings/img/password.svg"],
-	#app-navigation img[src$="/apps/fulltextsearch/img/fulltextsearch_black.svg"] {
+	#app-navigation img[src$="/apps/fulltextsearch/img/fulltextsearch_black.svg"],
+	#app-navigation img[src$="/apps/external/img/external-dark.svg"] {
 		filter: invert(95%);
 	}
 
 	// In apps list
-	#apps-list .app-image image {
+	#apps-list .app-image image,
+	#app-sidebar #app-details-view image.app-icon {
 		filter: invert(5%);
 
 	}
@@ -772,4 +821,9 @@ a.impersonate img.svg {
 			filter: invert(95%);
 		}
 	}
+}
+
+// Annoucement Center
+.app-announcementcenter #app-content .section span img {
+	filter: invert(95%);
 }
