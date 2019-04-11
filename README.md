@@ -14,7 +14,7 @@ Theming for Core Nextcloud functionality is done. You can check on the progress 
 ## Installation
 The master branch will always be the current stable release so you can clone that for easy installation and updates. Using git is currently the recommended way of installing the theme. You can also download it as a zip file either straight from the master branch, or on the release page.
 
-To install the theme please start by disabling the Theming app which comes with Nextcloud, it is known to cause issues with custom themes.
+I have previously recommended that you disable the Theming app before installing this theme, that is no longer the case with Nextcloud 14. It even seems that, in Nextcloud 14, small styling issue with folder icons are introduced by disabling the Theming app. At the same time, this also enables you to use the Theming app to customize the theme.
 
 Next, git clone or unzip it into your **nextcloud/themes** folder.
 
@@ -28,8 +28,12 @@ The theme is written with [Sass](http://sass-lang.com/).
 Please have a look at the CONTRIBUTING.md for details on how to contribute.
 
 ## Donations
-If you like the theme and would like to donate you can use the following cryptocurrency addresses:
+If you like the theme and would like to donate you can use the following ways:
 
+**PayPal:**  
+https://www.paypal.me/magnuswalbeck
+
+**Crypto:**  
 BTC: 1Pp3UG9k6ZkwrVXrhr9kwwvjwDk5Vchu3f  
 BCH: 1C7dQLqMU6Kucxx9GcFDMnTTTsBpeNT9vo  
 LTC: LLii6QbQiHnkjq2TNcNYC3JafV4mWYXWnx

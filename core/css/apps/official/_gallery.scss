@@ -1,0 +1,29 @@
+.app-gallery #app-content {
+	background-color: $background-normal !important;
+}
+
+#content-wrapper .app-gallery {
+	background-color: $background-dark;
+}
+
+#controls .button.sorting {
+	padding: 8px 5px;
+}
+
+#dropdown {
+	background: $background-normal;
+	box-shadow: none;
+	border: 1px solid $decoration-normal;
+}
+
+#link {
+	border-color: $decoration-normal;
+}
+
+#slideshow input[type="button"]:not(:disabled):not(.primary):not(#quota) {
+
+	&:hover, &:focus, &:active, &.active {
+		background-color: transparent;
+		border: none;
+	}
+}
