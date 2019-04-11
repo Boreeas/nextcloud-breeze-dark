@@ -1,14 +1,13 @@
 /* App menu ----------------------------------------------------------------- */
 
 #appmenu li {
-	span {
-		border: 1px solid $decoration-normal;
-		color: $foreground-normal;
-		-webkit-filter: none;
-		-moz-filter: none;
-		-ms-filter: none;
-		-o-filter: none;
-		filter: none;
+
+	&:hover a + span,
+	&:hover span,
+	&:focus span,
+	a:focus + span,
+	a:focus span {
+		background-color: $background-dark;
 	}
 
 	a.active::before {
@@ -27,12 +26,25 @@
 	ul > li > a, li > a {
 		opacity: 1;
 
-		&:hover, &:hover + div.app-navigation-entry-utils {
+		&:hover,
+		&:hover + div.app-navigation-entry-utils,
+		&:hover + div.app-navigation-entry-edit + div.app-navigation-entry-utils {
 			background-color: $background-active-hover;
 		}
 
 		&.active:hover {
 			background-color: $background-active;
+		}
+	}
+
+	.collapsible:hover {
+	
+		&::before {
+			background-color: unset;
+		}
+
+		> a {
+			background-image: none;
 		}
 	}
 
@@ -46,16 +58,11 @@
 	}
 
 	input {
-		background-color: $background-dark !important;
+		background-color: $background-dark;
 	}
 
 	select {
 		background-color: $background-normal !important;
-	}
-
-	.app-navigation-entry-edit,
-	.app-navigation-entry-deleted {
-		background-color: $background-normal;
 	}
 }
 
@@ -63,6 +70,7 @@
 
 	li > button {
 		color: $foreground-normal;
+		border-radius: unset;
 
 		&:hover {
 			background-color: $background-active-hover;
@@ -80,8 +88,8 @@
 		color: $foreground-normal;
 	}
 
-	.close {
-		opacity: 1;
+	#app-details-view .close, .close {
+		opacity: 0.7;
 	}
 
 	.thumbnail {

@@ -1,8 +1,3 @@
-body {
-	color: $foreground-normal;
-	background-color: $background-normal;
-}
-
 a {
 	color: $foreground-link;
 
@@ -13,19 +8,6 @@ a {
 	&.button:hover, &.button:focus {
 		color: $foreground-normal;
 	}
-}
-
-em {
-	opacity: 1;
-}
-
-h1, h2, h3 {
-    color: $foreground-active;
-	font-weight: 600;
-}
-
-h4, h5, h6 {
-	color: $foreground-normal;
 }
 
 // Tables
@@ -51,19 +33,6 @@ table {
 			color: $foreground-normal;
 		}
 	}
-
-	td {
-		border-bottom-color: $decoration-normal;
-	}
-
-	thead {
-
-		th {
-			color: $foreground-normal;
-			border-bottom: 1px solid $decoration-normal;
-			background-color: $background-normal;
-		}
-	}
 }
 
 table.grid th, table.grid td {
@@ -71,16 +40,6 @@ table.grid th, table.grid td {
 }
 
 // Input Fields
-
-input.radio[type="checkbox"], 
-input.radio[type="radio"], 
-input.checkbox[type="checkbox"], 
-input.checkbox[type="radio"] {
-	&:checked + label::before, &:indeterminate + label::before {
-		background-color: $background-active-alternate;
-		border-color: $background-active-alternate;
-	}
-}
 
 input:not([type="range"]),
 textarea,
@@ -205,6 +164,26 @@ input[type="button"] {
 	}
 }
 
+// Header buttons
+
+#header .button.primary, #header button.primary {
+	border-color: $decoration-normal;
+
+	&:hover, &:active, &:focus {
+		border-color: $decoration-active;
+	}
+}
+
+// Link Buttons
+
+.link-button:active,
+.link-button:hover,
+.link-button:focus {
+	color: $foreground-normal;
+	background-color: $foreground-link;
+	border-color: $decoration-active !important;
+}
+
 /* jQuery UI Fixes ---------------------------------------------------------- */
 
 .ui-state-default,
@@ -275,6 +254,13 @@ ul.ui-tabs-nav .ui-tabs-active > a {
 
 .preview {
 	filter: none;
+
+	&:hover,
+	&:focus,
+	&.selected {
+		filter: none;
+		border-color: $decoration-active;
+	}
 }
 
 .dropdown {

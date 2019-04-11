@@ -18,14 +18,24 @@
                 color: $foreground-inactive;
             }
 
-            pre {
+            tt {
                 background-color: $background-normal;
                 border-color: $decoration-normal
             }
 
-            code, tt {
-                background-color: $background-normal;
+            code, pre {
+                background-color: $background-dark;
                 border-color: $decoration-normal;
+            }
+
+            table tr {
+                border-top-color: $decoration-normal;
+                background-color: $background-normal;
+
+                th {
+                    color: $foreground-inactive;
+                    border-bottom-color: $decoration-normal;
+                }
             }
         }
     }

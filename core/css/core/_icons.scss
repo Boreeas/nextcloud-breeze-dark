@@ -7,11 +7,18 @@
 	background-image: url('../img/actions/password.svg?v=1');
 }
 
+/* Auth --------------------------------------------------------------------- */
+
+.icon-category-auth {
+	background-image: url('../img/categories/auth.svg')
+}
+
 /* Home --------------------------------------------------------------------- */
 
 .icon-home,
 .icon-inbox,
-#oc-dialog-filepicker-content .dirtree div:first-child a {
+#oc-dialog-filepicker-content .dirtree div:first-child a,
+#controls .breadcrumb .crumb .home {
 	background-image: url('../img/places/home.svg?v=1');
 }
 
@@ -26,7 +33,7 @@
 .icon-star,
 .icon-starred:hover,
 .icon-starred:focus,
-.icon-stationfav, {
+.icon-stationfav {
 	background-image: url('../img/actions/star.svg?v=1');
 	opacity: 0.5;
 }
@@ -75,7 +82,8 @@
 .icon-checkmark,
 .icon-sent,
 .icon-category-enabled,
-.multiselect.multiselect-vue .multiselect__content-wrapper li > span::before {
+.multiselect.multiselect-vue .multiselect__content-wrapper li > span::before,
+#two-factor-auth .multiselect.multiselect--above .multiselect__content-wrapper li > span::before {
 	background-image: url('../img/actions/checkmark.svg?v=1');
 }
 
@@ -148,7 +156,7 @@
 	background-image: url('../img/actions/tag.svg?v=1');
 }
 
-/* Link/World --------------------------------------------------------------------- */
+/* Link/World --------------------------------------------------------------- */
 
 .icon-link,
 .icon-world {
@@ -166,7 +174,8 @@
 
 /* Toggle Filelist ---------------------------------------------------------- */
 
-.nav-icon-sessions {
+.nav-icon-sessions,
+.icon-toggle-filelist {
 	background-image: url('../img/actions/toggle-filelist.svg?v=1');
 }
 
@@ -183,7 +192,8 @@
 .icon-settings,
 .icon-settings-dark,
 .icon-category-tools,
-#app-navigation .music-nav-settings a {
+#app-navigation .music-nav-settings a,
+.jsxc_settingsicon {
 	background-image: url('../img/actions/settings.svg?v=1');
 }
 
@@ -267,7 +277,8 @@ select {
 
 /* Help --------------------------------------------------------------------- */
 
-.icon-help {
+.icon-help,
+.jsxc_helpicon {
 	background-image: url('../img/help.svg');
 }
 
@@ -349,7 +360,8 @@ input[type="email"] + .icon-confirm:disabled {
 
 /* Menu --------------------------------------------------------------------- */
 
-.icon-menu {
+.icon-menu,
+#jsxc_menu > span {
 	background-image: url('../img/actions/menu.svg?v=1');
 }
 
@@ -401,7 +413,8 @@ input[type="email"] + .icon-confirm:disabled {
 
 /* Edit --------------------------------------------------------------------- */
 
-.icon-edit {
+.icon-edit,
+.icon-description {
 	background-image: url('../img/actions/edit.svg?v=1')
 }
 
@@ -431,13 +444,17 @@ input[type="email"] + .icon-confirm:disabled {
 	background-image: url('../img/actions/play.svg');
 }
 
-/* pause --------------------------------------------------------------------- */
+/* Pause --------------------------------------------------------------------- */
 
 .icon-pause {
 	background-image: url('../img/actions/pause.svg');
 }
 
-/* Play Big ----------------------------------------------------------------- */
+/* Folder ------------------------------------------------------------------- */
+
+.icon-folder, .icon-filetype-folder {
+	background-image: url('/core/img/filetypes/folder.svg?v=16');
+}
 
 // Music app
 .app-music, #music-controls {
@@ -517,6 +534,30 @@ input[type="email"] + .icon-confirm:disabled {
 
 .icon-address {
 	background-image: url('../img/actions/address.svg');
+}
+
+/* Notifications ------------------------------------------------------------ */
+
+.notification-container .emptycontent .icon-notifications-dark {
+	background-image: url('../img/notifications/notifications.svg');
+}
+
+/* Clock -------------------------------------------------------------------- */
+
+.icon-clock {
+	background-image: url('../img/widgets/clock.svg');
+}
+
+/* Disk Space --------------------------------------------------------------- */
+
+.icon-disk-space {
+	background-image: url('../img/widgets/diskspace.svg');
+}
+
+/* Fortunes ----------------------------------------------------------------- */
+
+.icon-fortunes {
+	background-image: url('../img/widgets/fortunes.svg');
 }
 
 /* App Categories ----------------------------------------------------------- */
@@ -669,6 +710,12 @@ input[type="email"] + .icon-confirm:disabled {
 	background-image: url('../img/places/music.svg')
 }
 
+/* Notes App ---------------------------------------------------------------- */
+
+.nav-icon-emptyfolder {
+	background-image: url('../img/notes/folder-empty.svg');
+}
+
 /* Social Sharing App ------------------------------------------------------- */
 
 .social-facebook,
@@ -708,7 +755,23 @@ div.icon-fulltextsearch-white {
 	background-image: url('../img/fulltextsearch.svg');
 }
 
+/* AppOrder ----------------------------------------------------------------- */
+
+// Remove filter from icons so they are white
+#app-order #apporder.section #appsorter img {
+	-webkit-filter: none;
+	filter: none;
+	filter: none;
+}
+
 /* CSS tricks to change icon color ------------------------------------------ */
+
+// Two Factor App Icon in Personal Settings
+
+img.two-factor-provider-settings-icon[src$="/apps/twofactor_totp/img/app-dark.svg"],
+img.two-factor-provider-settings-icon[src$="/apps/twofactor_u2f/img/app-dark.svg"] {
+	filter: invert(95%);
+}
 
 // Music app: icons for Music player controls in files and in app
 #music-controls img.control,
@@ -728,6 +791,17 @@ div.icon-fulltextsearch-white {
 
 // Music app: Play option in file action menu in Files App
 .fileActionsMenu .action-music-play img.icon {
+	filter: invert(95%);
+}
+
+// Deck app: deck icon in activity tab for individual card
+.activity-icon img[src$="/apps/deck/img/deck-dark.svg"] {
+	filter: invert(95%);
+}
+
+// Deck app: Toggle compact and expand
+.icon-toggle-compact-expanded,
+.icon-toggle-compact-collapsed {
 	filter: invert(95%);
 }
 
@@ -778,32 +852,24 @@ a.impersonate img.svg {
 	filter: invert(95%);
 }
 
-// Home icon in controls in passwords app
-.app-passwords #app-content #controls img[src$="/core/img/places/home.svg"] {
-	filter: invert(95%);
-}
-
 // Apps with generic icons names
 
 .app-settings {
 
-	// In admin and personal settings
-	#app-navigation img[src$="/img/app-dark.svg"] {
-		filter: invert(95%);
-	}
-
-	// In admin settings
+	#app-navigation img[src$="/img/app-dark.svg"],
 	#app-navigation img[src$="/settings/img/password.svg"],
 	#app-navigation img[src$="/apps/fulltextsearch/img/fulltextsearch_black.svg"],
-	#app-navigation img[src$="/apps/external/img/external-dark.svg"] {
+	#app-navigation img[src$="/apps/external/img/external-dark.svg"],
+	#app-navigation img[src$="/apps/bookmarks/img/bookmarks-black.svg"],
+	#app-navigation img[src$="/apps/ojsxc/img/app-black.svg"] {
 		filter: invert(95%);
 	}
 
 	// In apps list
 	#apps-list .app-image image,
+	#apps-list-search .app-image image,
 	#app-sidebar #app-details-view image.app-icon {
 		filter: invert(5%);
-
 	}
 
 	// Apps that are excluded from colour inverting

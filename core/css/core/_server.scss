@@ -5,39 +5,13 @@
 
 	p.info {
 		color: $foreground-inactive;
-
-		a {
-			font-weight: 600;
-
-			&:hover {
-				opacity: 1;
-			}
-		}
-		
-	}
-
-	#remember_login + label {
-
-		&:hover, &:focus {
-			opacity: 1;
-			color: $foreground-inactive;
-		}
-	}
-
-	form fieldset legend,
-	form fieldset .warning-info,
-	form input[type="checkbox"] + label,
-	#datadirContent label {
-		color: $foreground-inactive;
 	}
 }
 
 /* Header ------------------------------------------------------------------- */
 
-// Logo
-#header .logo,
-#header .logo-icon {
-	background-image: url('../img/logo.svg');
+#header .logo {
+	background-image: url('../img/logo.svg')
 }
 
 // Header Bar
@@ -47,14 +21,13 @@
 	background-color: $background-dark;
 }
 
-// Remove added opacity on Settings dropdown
-#settings #expand:hover img,
-#settings #expand:focus img, 
-settings #expand:active img,
 #settings #expand:hover #expandDisplayName,
 #settings #expand:focus #expandDisplayName,
-#settings #expand:active #expandDisplayName {
-	opacity: 1 !important;
+#settings #expand:active #expandDisplayName,
+#settings #expand:hover .avatardiv,
+#settings #expand:focus .avatardiv,
+#settings #expand:active .avatardiv {
+	border: none;
 }
 
 /* Search ------------------------------------------------------------------- */
@@ -70,53 +43,16 @@ settings #expand:active img,
 
 div.crumb a, div.crumb > span {
 	color: $foreground-normal;
+	opacity: 0.7;
 }
 
 div.crumb span.icon-shared, div.crumb span.icon-public {
-	opacity: 0.3;
+	opacity: 0.7;
 }
 
 /* Menues ------------------------------------------------------------------- */
 
-.menu {
-	box-shadow: none;
-	background-color: $background-normal;
-	border: 1px solid $decoration-normal;
-
-	&::after {
-		border-bottom-color: $decoration-normal;
-	}
-
-	li {
-		color: $foreground-normal;
-
-		&:hover {
-			background-color: $background-active-hover;
-		}
-	}
-}
-
-#contactsmenu {
-
-	.menutoggle:hover {
-		opacity: 1;
-	}
-
-	> .menu {
-		
-		.contact {
-			border-bottom-color: $decoration-normal;
-		}
-
-		.content .footer a {
-			opacity: 1;
-		}
-	}
-}
-
-.popovermenu {
-	background-color: $background-normal;
-	color: $foreground-normal;
+.menu, .popovermenu {
 	border: 1px solid $decoration-normal;
 	filter: none;
 
@@ -124,22 +60,17 @@ div.crumb span.icon-shared, div.crumb span.icon-public {
 		border-bottom-color: $decoration-normal;
 	}
 
-	li {
-
-		> a {
-			color: $foreground-normal;
-		}
+	li:hover {
+		background-color: $background-active-hover;
 	}
 }
 
-.bubble, .app-navigation-entry-menu {
-	background-color: $background-normal;
+.popovermenu li > a {
 	color: $foreground-normal;
+}
+
+.app-navigation-entry-menu {
 	border: 1px solid $decoration-normal;
-	-webkit-filter: none;
-	-moz-filter: none;
-	-ms-filter: none;
-	-o-filter: none;
 	filter: none;
 
 	&::after {
@@ -158,27 +89,6 @@ div.crumb span.icon-shared, div.crumb span.icon-public {
 
 #body-settings #expand::before {
 	border-bottom-color: $decoration-normal;
-}
-
-#navigation {
-	background-color: $background-normal;
-	border: 1px solid $decoration-normal;
-	box-shadow: none;
-
-	&::after {
-		border-bottom-color: $decoration-normal;
-	}
-
-	a span {
-		color: $foreground-normal;
-	}
-}
-
-#app-navigation .utils .action {
-
-	&:hover, &:focus {
-		opacity: 0.7;
-	}
 }
 
 /* Info colours ------------------------------------------------------------- */
@@ -240,7 +150,7 @@ span {
 
 // Section Container
 // Primarily seems to be used under settings
-.section, .followupsection {
+.followupsection {
 	color: $foreground-normal;
 }
 
@@ -251,20 +161,11 @@ span {
 	color: $foreground-normal;
 	box-shadow: none;
 	border: 1px solid $decoration-normal;
-
-	.jcrop-holder {
-		box-shadow: none;
-	}
 }
 
 // Description of the different update channels
-#updatenotification .channel-description span {
-	color: $foreground-normal;
-
-	strong {
-		color: $foreground-active;
-		font-weight: bold;
-	}
+#updatenotification .channel-description span strong {
+	font-weight: bold;
 }
 
 /* App Store ---------------------------------------------------------------- */
@@ -287,24 +188,11 @@ span {
 		.app-image-icon .icon-settings-dark {
 			opacity: 1;
 		}
-
-		.section > * {
-			border-bottom-color: $decoration-normal;
-		}
 	}
 
 	.app-name {
 		font-weight: 600;
 	}
-}
-
-#app-sidebar #app-details-view h2 {
-	
-	svg,
-	.icon-settings-dark {
-		opacity: 1;
-}
-
 }
 
 .app-version {
@@ -316,11 +204,6 @@ span {
 
 #filestable tbody {
 	tr {
-		background-color: $background-normal;
-
-		&:hover {
-			background-color: $background-active-hover;
-		}
 
 		&:focus, &:active {
 			background-color: $background-active;
@@ -352,26 +235,8 @@ span {
 /* File picker -------------------------------------------------------------- */
 
 .oc-dialog {
-	background-color: $background-normal;
-	color: $foreground-normal;
 	box-shadow: none;
 	border: 1px solid $decoration-normal;
-
-	.fileexists th label {
-		color: $foreground-normal;
-	}
-}
-
-.oc-dialog-title {
-	background-color: $background-normal;
-}
-
-#oc-dialog-filepicker-content .filelist {
-	background-color: $background-dark;
-
-	td {
-		border-bottom-color: $decoration-normal;
-	}
 }
 
 #oc-dialog-filepicker-content .filepicker_element_selected {
@@ -384,15 +249,6 @@ span {
 	.filename {
 		color: $foreground-active;
 	}
-
-	&:hover {
-		background-color: $background-active;
-	}
-}
-
-.oc-dialog-buttonrow {
-	background-image: none;
-	background-color: $background-normal;
 }
 
 /* Multiselect -------------------------------------------------------------- */
@@ -521,6 +377,42 @@ ul.multiselectoptions {
 .activitysubject strong.systemtag {
 	background-color: $background-dark;
 	border: 1px solid $decoration-normal;
+}
+
+
+// The following has been added for bookmarks tags
+.select2-container--default .select2-selection--multiple {
+    background-color: $background-dark;
+    border-color: $decoration-normal;
+}
+
+.select2-dropdown {
+    background-color: $background-dark;
+	border-color: $decoration-normal;
+	
+	&:hover {
+		border-color: $decoration-active;
+	}
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: $background-active-hover;
+    color: $foreground-normal;
+}
+
+.bookmark-detail .select2-container--default .select2-selection--multiple .select2-selection__choice, 
+.bulk-actions .select2-container--default .select2-selection--multiple .select2-selection__choice, 
+.bookmark-detail .tag-nav-item {
+    background-color: $background-normal;
+    
+    &:hover {
+        background-color: $background-active-hover;
+    }
+}
+
+.select2-container--default .select2-selection--multiple:hover,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+	border-color: $decoration-active;
 }
 
 /* Auto suggestion users in comments dropdown ------------------------------- */
